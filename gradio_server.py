@@ -24,7 +24,8 @@ def launch_gradio():
         inputs=[
             gr.File(label="上传PDF文件"),
             gr.Textbox(label="源语言（默认：英文）", placeholder="English", value="English"),
-            gr.Textbox(label="目标语言（默认：中文）", placeholder="Chinese", value="Chinese")
+            gr.Textbox(label="目标语言（默认：中文）", placeholder="Chinese", value="Chinese"),
+            gr.Textbox(label="风格选择：normal/ novel/ news/ informal/ legal")
         ],
         outputs=[
             gr.File(label="下载翻译文件")
