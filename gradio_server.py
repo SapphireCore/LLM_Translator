@@ -8,11 +8,11 @@ from utils import ArgumentParser, LOG
 from translator import PDFTranslator, TranslationConfig
 
 
-def translation(input_file, source_language, target_language):
+def translation(input_file, source_language, target_language, style):
     LOG.debug(f"[翻译任务]\n源文件: {input_file.name}\n源语言: {source_language}\n目标语言: {target_language}")
 
     output_file_path = Translator.translate_pdf(
-        input_file.name, source_language=source_language, target_language=target_language)
+        input_file.name, source_language=source_language, target_language=target_language，style=style)
 
     return output_file_path
 
